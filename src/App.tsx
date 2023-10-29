@@ -1,6 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import MainPage from "./pages/main";
+import CarInfo from "./pages/carInfo";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <header className='App-header'></header>
       <Routes>
         <Route path='/' element={<MainPage />} />
+        <Route path='/:id' element={<CarInfo />} />
       </Routes>
     </div>
   );

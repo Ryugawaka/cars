@@ -33,7 +33,7 @@ const MainPage: React.FC = () => {
           <RowElement car={c} key={c.id} />
         ))}
       </div>
-      <button className='w-20 h-20 text-center rounded-full border text-3xl text-white  font-semibold absolute right-[60px] bottom-[60px] hover:bg-slate-900 hover:border-slate-950'>
+      <button className='w-20 h-20 text-center rounded-full border text-3xl text-white  font-semibold absolute right-[60px] bottom-[60px] bg-slate-700 hover:bg-slate-900 hover:border-slate-950'>
         +
       </button>
     </div>
