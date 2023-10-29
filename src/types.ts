@@ -1,5 +1,5 @@
-type Engine = "petrol" | "electric" | "disel";
-type Transmission = "automatic" | "manual" | "robotic";
+type Engine = "Бензиновый" | "Электрический" | "Дизельный";
+type Transmission = "Автоматическая" | "Ручная" | "Роботизированая";
 
 export type Car = {
   id: number;

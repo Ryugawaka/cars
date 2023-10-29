@@ -9,8 +9,8 @@ export const cars: Car[] = [
     color: "Белый",
     year: 2013,
     price: 160000,
-    engine: "disel",
-    transmission: "automatic",
+    engine: "Дизельный",
+    transmission: "Автоматическая",
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ export const cars: Car[] = [
     color: "Красный",
     year: 2018,
     price: 1200000,
-    engine: "electric",
+    engine: "Электрический",
     powerReserve: 100,
   },
 ];

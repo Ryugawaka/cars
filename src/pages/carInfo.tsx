@@ -14,7 +14,7 @@ const CarInfo: React.FC = () => {
       </Link>
       <div className='flex justify-between'>
         <img src={carById?.img} alt='car' />
-        <div className='grid self-left grid-cols-2 w-[30rem]'>
+        <div className='grid self-left grid-cols-2 w-[30rem] text-white text-md'>
           <p>Бренд:</p>
           <p>{carById?.brand}</p>
           <p>Модель:</p>

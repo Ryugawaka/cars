@@ -2,6 +2,7 @@ import React from "react";
 import { cars } from "../mocks/cars";
 import RowElement from "../components/RowElement";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const MainPage: React.FC = () => {
   // const data: Promise<Car[]> = axios
@@ -22,7 +23,7 @@ const MainPage: React.FC = () => {
         <button className={sortButtonClassName}>Модель</button>
         <button className={sortButtonClassName}>Цена</button>
       </div>
-      <div className='grid grid-cols-4 mx-auto text-center ml-[29rem] mr-[10rem] mb-[10px] text-white text-xl'>
+      <div className='grid grid-cols-4 mx-auto text-center ml-[29%] mr-[10rem] mb-[10px] text-white text-xl'>
         <p>Бренд</p>
         <p>Модель</p>
         <p>Год</p>
@@ -33,9 +34,11 @@ const MainPage: React.FC = () => {
           <RowElement car={c} key={c.id} />
         ))}
       </div>
-      <button className='w-20 h-20 text-center rounded-full border text-3xl text-white  font-semibold absolute right-[60px] bottom-[60px] bg-slate-700 hover:bg-slate-900 hover:border-slate-950'>
-        +
-      </button>
+      <Link to='/add'>
+        <button className='w-20 h-20 text-center rounded-full border text-3xl text-white  font-semibold absolute right-[60px] bottom-[60px] bg-slate-700 hover:bg-slate-900 hover:border-slate-950'>
+          +
+        </button>
+      </Link>
     </div>
   );
 };
