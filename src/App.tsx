@@ -6,7 +6,7 @@ import AddCar from "./pages/addCar";
 
 function App() {
   return (
-    <div className='App bg-zinc-600 h-[100vh]'>
+    <div className='App bg-zinc-600 h-[100%]'>
       <header className='App-header'></header>
       <Routes>
         <Route path='/' element={<MainPage />} />

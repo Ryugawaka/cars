@@ -16,12 +16,11 @@ const MainPage: React.FC = () => {
   const sortButtonClassName =
     "text-stone-200 border px-3 py-1 rounded-xl border-slate-950 hover:bg-slate-800 hover:text-slate-300";
   return (
-    <div className='h-full py-20'>
+    <div className='h-[100%] py-20'>
       <div className='flex justify-end gap-5 w-full pb-3 font-semibold px-10 items-center'>
-        <p>Сортировать по:</p>
+        <p>Фильтры:</p>
         <button className={sortButtonClassName}>Бренд</button>
-        <button className={sortButtonClassName}>Модель</button>
-        <button className={sortButtonClassName}>Цена</button>
+        <button className={sortButtonClassName}>Цвет</button>
       </div>
       <div className='grid grid-cols-4 mx-auto text-center ml-[29%] mr-[10rem] mb-[10px] text-white text-xl'>
         <p>Бренд</p>
