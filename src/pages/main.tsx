@@ -46,10 +46,14 @@ const MainPage: React.FC = () => {
   const filterCars = (type: "color" | "brand", value: string) => {
     switch (type) {
       case "brand":
-        setFilteredCars(cars.filter((c) => c.brand === value));
+        value === "Все"
+          ? setFilteredCars(cars)
+          : setFilteredCars(cars.filter((c) => c.brand === value));
         break;
       case "color":
-        setFilteredCars(cars.filter((c) => c.color === value));
+        value === "Все"
+          ? setFilteredCars(cars)
+          : setFilteredCars(cars.filter((c) => c.color === value));
         break;
     }
   };
@@ -62,18 +66,20 @@ const MainPage: React.FC = () => {
         <p>Фильтры:</p>
         <select
           className={filterClassName}
-          defaultValue={"Бренд"}
+          defaultValue={"Все"}
           onChange={(e) => filterCars("brand", e.target.value)}
         >
+          <option>Все</option>
           {Array.from(brands).map((b, index) => (
             <option key={index}>{b}</option>
           ))}
         </select>
         <select
           className={filterClassName}
-          defaultValue={"Цвет"}
+          defaultValue={"Все"}
           onChange={(e) => filterCars("color", e.target.value)}
         >
+          <option>Все</option>
           {Array.from(colors).map((с, index) => (
             <option key={index}>{с}</option>
           ))}
