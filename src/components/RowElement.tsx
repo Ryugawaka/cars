@@ -15,7 +15,7 @@ const RowElement: React.FC<RowElementProps> = (props) => {
         <p>{car.brand}</p>
         <p>{car.model}</p>
         <p>{car.year}</p>
-        <p>{car.price}</p>
+        <p>{car.price} Р</p>
       </div>
     </Link>
   );

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Car } from "../types";
 import { cars } from "../mocks/cars";
 
@@ -11,6 +11,7 @@ const AddCar: React.FC = () => {
     formState: { errors },
   } = useForm<Car>();
   const [engine, setEngine] = useState("");
+  const navigate = useNavigate();
 
   const inputClassName = "px-4 py-2 rounded-md outline-none";
 
@@ -21,8 +22,8 @@ const AddCar: React.FC = () => {
     } else {
       delete car.powerReserve;
     }
-    console.log(car);
     cars.push(car);
+    navigate("/");
   };
 
   return (

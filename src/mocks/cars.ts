@@ -23,4 +23,15 @@ export const cars: Car[] = [
     engine: "Электрический",
     powerReserve: 100,
   },
+  {
+    id: 3,
+    img: "https://falconsgt.com/media/images/cars/489/1920_1080_ZRE00%2016x9.jpg",
+    brand: "Toyota",
+    model: "Corolla",
+    color: "Серебристый",
+    year: 2015,
+    price: 900000,
+    engine: "Дизельный",
+    transmission: "Автоматическая",
+  },
 ];
