@@ -8,16 +8,18 @@ import { Car } from "../types";
 const colors = new Set(cars.map((c) => c.color));
 const brands = new Set(cars.map((c) => c.brand));
 
-const MainPage: React.FC = () => {
-  // const data: Promise<Car[]> = axios
-  //   .get("https://api.jsonbin.io/v3/b/653e46a90574da7622bf30f0", {
-  //     headers: {
-  //       "X-Master-Key":
-  //         "$2a$10$l5dwRYFJzaOPyRjLzwRFPOMr17BPj1UDafxQFoVonPiD7J71gNqBe",
-  //     },
-  //   })
-  //   .then((res) => console.log(res.data.record));
+// вариант с получением данных с помощью axios (заменить initialState для filteredCars на data)
 
+// const data: Car[] = await axios
+//   .get("https://api.jsonbin.io/v3/b/653e46a90574da7622bf30f0", {
+//     headers: {
+//       "X-Master-Key":
+//         "$2a$10$l5dwRYFJzaOPyRjLzwRFPOMr17BPj1UDafxQFoVonPiD7J71gNqBe",
+//     },
+//   })
+//   .then((res) => res.data.record);
+
+const MainPage: React.FC = () => {
   const [filteredCars, setFilteredCars] = useState<Car[]>(cars);
 
   // сортировка по ключу объекта car
@@ -42,7 +44,6 @@ const MainPage: React.FC = () => {
   };
 
   const filterCars = (type: "color" | "brand", value: string) => {
-    console.log(value, type);
     switch (type) {
       case "brand":
         setFilteredCars(cars.filter((c) => c.brand === value));
@@ -94,7 +95,9 @@ const MainPage: React.FC = () => {
         {filteredCars ? (
           filteredCars.map((c) => <RowElement car={c} key={c.id} />)
         ) : (
-          <p>Ничего не найдено</p>
+          <p className=' text-center mt-20 text-4xl font-bold text-white'>
+            Ничего не найдено
+          </p>
         )}
       </div>
       <Link to='/add'>
